@@ -1,5 +1,9 @@
 #
 # Cookbook:: apache_cookbook
-# Recipe:: default
-#
-# Copyright:: 2023, The Authors, All Rights Reserved.
+package 'httpd' do
+    action :install
+end
+
+service 'httpd' do
+    action [ :enable, :start ]
+end
